@@ -36,17 +36,21 @@ ii. Go to https://console.developers.google.com/apis/credentials
 
 iii. Select "Create credentials" > "Service Account key" and generate a new key for the Service that is associated to your Google Play service account.
 
-### 4. Build apk file
+### 4. Build apk or aab file
 
-Build signed production android apk file to upload. In case of a CI server, this file should be already generated.
+Build signed production android apk or aab file to upload. In case of a CI server, this file should be already generated.
 
 ### 4. Run Upload Command
 
 Execute the binary, passing required data in arguments.
-
-```bash
- java -jar release-manager-1.0.jar -key "key.json" -apk "app.apk" -track "internal" -name "myApp" -notes "new release"
-```
+* APK File
+    ```bash
+     java -jar release-manager-1.0.jar -key "key.json" -apk "app.apk" -track "internal" -name "myApp" -notes "new release"
+    ```
+* AAB File
+    ```bash
+     java -jar release-manager-1.0.jar -key "key.json" -apk "app.aab" -track "internal" -name "myApp" -notes "new release" -name appName -packageName app.package.name
+    ```
 
 #### CLI Options
 
@@ -54,13 +58,14 @@ Running without any arguments will print available argument options.
 
 ```bash
 Options:
- -apk VAL       : The apk file to publish
- -key VAL       : JSON key file of authorized service account
- -name VAL      : (optional) AndroidPublisher name on Play Store (defaults to
-                  name in apk)
- -notes VAL     : (optional) Release notes
- -notesFile VAL : (optional) Release notes from file
- -track VAL     : Release track to use. Eg. internal, alpha, beta or production
+ -apk VAL           : The apk file to publish
+ -key VAL           : JSON key file of authorized service account
+ -name VAL          : (optional) AndroidPublisher name on Play Store (defaults to
+                      name in apk)
+ -notes VAL         : (optional) Release notes
+ -notesFile VAL     : (optional) Release notes from file
+ -track VAL         : Release track to use. Eg. internal, alpha, beta or production
+ -packageName VAL   : (optional for apk) App Package Name
  ```
 
 ## Development
