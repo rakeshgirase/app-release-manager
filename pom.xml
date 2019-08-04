@@ -10,12 +10,13 @@
     </parent>
     <groupId>com.rg</groupId>
     <artifactId>release-manager</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>app-release-manager</name>
-    <description>Publishes APK File to Google Play Store</description>
+    <description>Publishes APK OR AAB File to Google Play Store</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <google.api.version>1.29.0</google.api.version>
     </properties>
 
     <dependencies>
@@ -42,7 +43,7 @@
         <dependency>
             <groupId>com.google.api-client</groupId>
             <artifactId>google-api-client</artifactId>
-            <version>1.28.0</version>
+            <version>${google.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.apis</groupId>
@@ -52,17 +53,17 @@
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client</artifactId>
-            <version>1.28.0</version>
+            <version>${google.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client-jackson2</artifactId>
-            <version>1.28.0</version>
+            <version>${google.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.oauth-client</groupId>
             <artifactId>google-oauth-client</artifactId>
-            <version>1.28.0</version>
+            <version>${google.api.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
