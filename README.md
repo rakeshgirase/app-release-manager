@@ -58,7 +58,7 @@ Running without any arguments will print available argument options.
 
 ```bash
 Options:
- -apk VAL           : The apk file to publish
+ -file VAL           : The apk or aab file to publish
  -key VAL           : JSON key file of authorized service account
  -name VAL          : (optional) AndroidPublisher name on Play Store (defaults to
                       name in apk)
