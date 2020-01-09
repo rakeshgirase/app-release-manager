@@ -45,11 +45,11 @@ Build signed production android apk or aab file to upload. In case of a CI serve
 Execute the binary, passing required data in arguments.
 * APK File
     ```bash
-     java -jar release-manager-1.0.jar -key "key.json" -apk "app.apk" -track "internal" -name "myApp" -notes "new release"
+     java -jar release-manager-1.1.jar -key "key.json" -file "app.apk" -track "internal" -name "myApp" -notes "new release"
     ```
 * AAB File
     ```bash
-     java -jar release-manager-1.0.jar -key "key.json" -apk "app.aab" -track "internal" -name "myApp" -notes "new release" -name appName -packageName app.package.name
+     java -jar release-manager-1.1.jar -key "key.json" -file "app.aab" -track "internal" -name "myApp" -notes "new release" -name appName -packageName app.package.name
     ```
 
 #### CLI Options
