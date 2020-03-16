@@ -11,7 +11,7 @@ Suitable for automation of play store uploads in a CI system.
 
 1. Download the latest jar file from [Releases Section](https://github.com/rakeshgirase/app-release-manager/releases).
 2. Place it in root folder of your application. You can check in the file for Cloud build.
-3. Use command java -jar release-manager-1.2.jar -key "key.json" -apk "app.apk" -track "internal" -name "myApp" -notes "new release". (You can use this command in your cloud build config file)
+3. Use command java -jar release-manager-1.2.jar -key "key.json" -file "app.apk" -track "internal" -name "myApp" -notes "new release". (You can use this command in your cloud build config file)
 
 
 ## Usage
