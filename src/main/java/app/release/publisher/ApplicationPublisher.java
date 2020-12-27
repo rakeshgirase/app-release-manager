@@ -3,6 +3,7 @@ package app.release.publisher;
 import java.util.Locale;
 
 import app.release.model.CommandLineArguments;
+import lombok.extern.slf4j.Slf4j;
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Localizable;
@@ -10,6 +11,7 @@ import org.kohsuke.args4j.Localizable;
 /**
  * Uploads application bundle to Google Play Store.
  */
+@Slf4j
 public class ApplicationPublisher {
 
     public static void main(String... args) {
@@ -18,7 +20,7 @@ public class ApplicationPublisher {
             Publisher publisher = PublisherFactory.buildPublisher(arguments);
             publisher.publish();
         } catch (Exception e) {
-            System.err.println("ERROR: " + e.getMessage());
+            log.error("ERROR: [{}]", e.getMessage());
             e.printStackTrace();
             System.exit(2);
         }
@@ -59,17 +61,13 @@ public class ApplicationPublisher {
             parser.parseArgument(args);
         } catch (CmdLineException e) {
             // print usage and forward error
-            System.err.println("Invalid arguments.");
-            System.err.println("Options:");
+            log.error("Invalid arguments.");
+            log.error("Options:");
             parser.printUsage(System.err);
             throw e;
         }
 
         return PublisherFactory.buildPublisher(arguments);
-    }
-
-    private boolean isApk(CommandLineArguments arguments) {
-        return arguments.getFile().toLowerCase().endsWith(".apk");
     }
 
     /**
