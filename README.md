@@ -77,3 +77,7 @@ mvn clean install
 ```
 
 Pull requests and suggestions are welcome.
+
+Happy with this module!
+
+<a href="https://www.buymeacoffee.com/rakeshgirase" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;"></a>
